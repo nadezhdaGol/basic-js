@@ -1,13 +1,14 @@
 const CustomError = require("../extensions/custom-error");
 
-module.exports = function countCats(/* matrix */) {
+module.exports = function countCats(backyard) {
   let cats = [];
-  let newArr = array.flat();
+  let newBackyard = backyard.flat();
 
-  for (let i = 0; i < newArr.length; i++) {
-    if (newArr[i] == '^^') {
-      cats.push(newArr[i]);
+  for (let i = 0; i < newBackyard.length; i++) {
+    if (newBackyard[i] == '^^') {
+      cats.push(newBackyard[i]);
     }
   }
+  
   return cats.length;
 };
