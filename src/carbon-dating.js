@@ -7,7 +7,7 @@ module.exports = function dateSample(sampleActivity) {
 
   let num = +sampleActivity;
 
-  if (typeof sampleActivity !== 'string' || isNaN(num) || num == '' || num == ' ') {
+  if (typeof sampleActivity !== 'string' || isNaN(num) || num == '' || num == ' ' || num <= 0 || num >= 15) {
     return false;
   }
 
