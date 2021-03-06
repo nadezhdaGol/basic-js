@@ -1,6 +1,8 @@
 const CustomError = require("../extensions/custom-error");
 
 const chainMaker = {
+  strArr: [],
+  
   getLength() {
     return this.strArr.length;
   },
