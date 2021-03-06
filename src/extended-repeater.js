@@ -12,6 +12,8 @@ module.exports = function repeater(str, options) {
   let sep = options['separator'];
   if (sep === undefined) {
     sep = '+';
+  } else {
+    sep = String(sep);
   }
   
   let add = options['addition'];
@@ -26,9 +28,11 @@ module.exports = function repeater(str, options) {
     addRT = 1;
   }
   
-  let addS = String(options['additionSeparator']);
+  let addS = options['additionSeparator'];
   if (addS === undefined) {
     addS = '|';
+  } else {
+    addS = String(addS);
   }
 
   let newAdd = add + addS;
