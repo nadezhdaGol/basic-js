@@ -90,18 +90,18 @@ class VigenereCipheringMachine {
       numKey.push(keyLettersStrShort.charCodeAt(a) - 97);
     }
 
-    let numСipher = [];
+    let numStr = [];
     for (let b = 0; b < numCipher.length; b++) {
       if ((numCipher[b] - numKey[b]) < 0) {
-        numСipher.push(numCipher[b] - numKey[b] + 26);
+        numStr.push(numCipher[b] - numKey[b] + 26);
       } else {
-        numСipher.push(numCipher[b] - numKey[b]);
+        numStr.push(numCipher[b] - numKey[b]);
       }
     }
 
     let string = [];
-    for (let h = 0; h < numСipher.length; h++) {
-      string.push(String.fromCharCode(numСipher[h] + 97));
+    for (let h = 0; h < numStr.length; h++) {
+      string.push(String.fromCharCode(numStr[h] + 97));
     }
 
     let result = [];
